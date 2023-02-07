@@ -17,13 +17,17 @@
     ></script>
   </head>
   <body>
-    <button id="removeHeader">Remove the header</button>
-    <h1 id="myHeader">Hello, world!</h1>
+    <div>
+      <input type="text" id="task" />
+      <button id="addTask">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
 
     <script>
       $(document).ready(function () {
-        $("#removeHeader").click(function () {
-          $("#myHeader").remove();
+        $("#addTask").click(function () {
+          $("#taskList").append("<li>" + $("#task").val() + "</li");
         });
       });
     </script>
